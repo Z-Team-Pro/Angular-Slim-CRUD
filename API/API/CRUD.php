@@ -17,25 +17,10 @@ $app->post('/api/v1/AddUser',function($req,$res){
     $new->save();
     //logging this action in the server log
     $this->logger->info("user has been saved successflly " );
-    $messag=array("status"=>true,"message"=>"user has been Created","userId"=>$new->getObjectId());
-    //Generate a new JWT token for this user 
-    $MyJWT=$this->JWT;
-    $now = new DateTime();
-    $future = new DateTime("now +10 minutes");
-    // $server = $request->getServerParams();
-    $payload = [
-        "iat" => $now->getTimeStamp(),
-        "exp" => $future->getTimeStamp(),
-        "sub" =>"JWT Demo",
-    ];
-    $secret = "supersecretkey";
-    $token = $MyJWT->encode($payload, $secret, "HS512");
-    $messag["token"] = $token;
-    return $res->withStatus(201)
-        ->withHeader("Content-Type", "application/json")
-        ->write(json_encode($messag, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
-         return $res->withJson($messag,200,JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); 
-    }
+    //create user array
+    $messag=array("status"=>true,"new_user"=>"user has been Created","userId"=>$new->getObjectId());
+    return $res->withJson($messag,200);
+          }
     catch ( Exception $ex){
            $this->logger>info("Error in saving new user " .$ex);
            $messag=array("status"=>false,"message"=>"Error in Creating user ","error"=>$ex->getMessage());
@@ -47,7 +32,7 @@ $app->post('/api/v1/AddUser',function($req,$res){
 
 //Get Users Data 
 
-$app->get('/api/v1/GetUser[/{id}]',function($req,$res,$args){
+$app->get('/api/v1/GetUser/[{id}]',function($req,$res,$args){
     //get user data
     
    try {
@@ -61,7 +46,8 @@ $app->get('/api/v1/GetUser[/{id}]',function($req,$res,$args){
          $user= $query->get($args['id']);
          $user_array= array('userName'=>$user->get('name'),
                          'email'=>$user->get('email'), 
-                         'phone'=>$user->get('phone'));
+                         'phone'=>$user->get('phone'),
+                        'user_id'=>$user->getObjectId());
           //send response 
           $message=array('status'=>true,'user'=>$user_array);
           return $res->withJson($message,200);
@@ -74,7 +60,9 @@ $app->get('/api/v1/GetUser[/{id}]',function($req,$res,$args){
            foreach($users as $key=> $user){
             $user_array= array('userName'=>$user->get('name'),
                                'email'=>$user->get('email'), 
-                               'phone'=>$user->get('phone'));
+                               'phone'=>$user->get('phone'),
+                               'user_id'=>$user->getObjectId()
+                            );
             //push user array on users_list
             array_push($users_list,$user_array); 
            }

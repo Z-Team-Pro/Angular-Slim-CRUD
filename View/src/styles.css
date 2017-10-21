@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+ table{
+text-align: center;
+background-color: #D2D5D6;
+}
+th {
+    text-align: center;
+}

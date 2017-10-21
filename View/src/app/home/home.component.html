@@ -1,0 +1,161 @@
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+  
+      <header class="main-header">
+
+
+
+          
+              <!-- Logo -->
+              <a href="" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>A</b>CRUD</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Angular</b>CRUD</span>
+              </a>
+          
+              <!-- Header Navbar: style can be found in header.less -->
+              <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                  <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                  <ul class="nav navbar-nav">
+                
+              
+                 
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                        <span class="hidden-xs">user Name</span>
+                      </a>
+                      
+                      <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header">
+                          <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          
+                          <p>
+                             
+                            <small></small>
+                          </p>
+                        </li>
+                 
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                       
+                          <div class="pull-right">
+                            <a  (click)="Logout()" class="btn btn-default btn-flat">Sign out</a>
+                          </div>
+                        </li>
+                      </ul>
+                      
+                    </li>
+                 
+                  </ul>
+                </div>
+          
+              </nav>
+            </header>
+ 
+
+            <div style="margin-left:10%;" >
+                <div class="col-md-10">
+                    <div   class="box">
+                      <div  *ngIf="Users" class="box-header with-border " style="text-align:center">
+                        <h3 class="box-title">Users Table </h3>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body">
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width: 20px">#</th>
+                            <th style="width: 60px">Name</th>
+                            <th style="width: 60px">Phone</th>
+                            <th style="width: 60px" >Email</th>
+                            <th style="width: 80px"  >CRUDS</th>
+                          
+                            
+                            
+                          </tr>
+          
+          
+                          <tr  >
+                              <td>#</td>
+                              <td>
+                              
+                              <input name="name" type='text' [(ngModel)]="name">
+                              </td>
+                              <td>
+                                
+                                <input name="email" type='text' [(ngModel)]="email">
+            
+                              </td>
+                              <td>
+                              
+                                <input  name= "phone" type='text' [(ngModel)]="phone">
+            
+                              </td>
+                              <td >
+                                  <button class="btn btn-success btn-flat" (click)="AddUser()"> <i class="glyphicon glyphicon-plus"></i> </button>
+                              </td>
+                              
+                                              </tr>
+                          
+                          
+          
+                          <tr *ngFor="let user of Users ;let i=index" >
+                            <td>{{user.user_id}}</td>
+                            <td>
+                            <span *ngIf="!user.edit">  {{user.userName}}</span>
+                            <input *ngIf="user.edit" type='text' name="new_name" [(ngModel)]="new_name" >
+                            </td>
+                            <td>
+                               <span *ngIf="!user.edit">{{user.email}}</span>
+                              <input *ngIf="user.edit" type='text' name="new_email" [(ngModel)]="new_email" >
+          
+                            </td>
+                            <td>
+                               <span *ngIf="!user.edit">{{user.phone}}</span> 
+                              <input *ngIf="user.edit" type='text' name="new_phone" [(ngModel)]="new_phone ">
+          
+                            </td>
+                            <td  *ngIf="!user.new &&!user.edit" colspan="2"><button class="btn btn-warning btn-flat" (click)="EditUser(user.user_id)" > <i class="glyphicon glyphicon-pencil"></i> </button>
+                                            <button class="btn btn-danger btn-flat" (click)="DeleteUser(user.user_id)"> <i class="glyphicon glyphicon-remove"></i> </button>
+                            </td>
+                            <td  *ngIf="user.edit" colspan="2"><button class="btn btn-info btn-flat" (click)=UpdateUser(user.user_id) > <i class="glyphicon glyphicon-ok"></i> </button>
+                              
+                            <td  *ngIf="user.new" colspan="2"><button class="btn btn-primary btn-flat" (click)=GetUser(user.user_id) > <i class="glyphicon glyphicon-download-alt"></i> </button>
+              </td>
+                            
+                                            </tr>
+                        
+                        
+                      
+                        </tbody></table>
+                      </div>
+                     
+                    </div>
+                    <div *ngIf="!Users"id="expired"  class="box" style="text-align:center ;height:100px;">
+                      <span class="expired">You sestion has beed expired</span>
+                      <div>
+          
+          
+          
+          
+          
+          
+          
+                      
+                    </div>
+          
+                    
+                   
+          
+
+
+          </div>

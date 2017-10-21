@@ -22,7 +22,8 @@ $app->post('/api/v1/Login',function($req,$res){
             //Create user array
             $user_array=array('userName'=> $user[0]->get('name'),
                         'email'=>$user[0]->get('email'),
-                        'phone'=>$user[0]->get('phone') ); 
+                        'phone'=>$user[0]->get('phone'),
+                        'user_id'=>$user[0]->getObjectId() ); 
             //Generate a new JWT token for this user 
             $MyJWT=$this->JWT;
             $now = new DateTime();

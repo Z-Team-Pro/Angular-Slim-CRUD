@@ -18,3 +18,50 @@
 [2017-10-20 20:52:06] Your Log API .INFO: new user login with user name= ramy [] {"uid":"298ad71"}
 [2017-10-20 20:55:13] Your Log API .INFO: Error in updating  user Parse\ParseException: Object not found. in /home/ramy/Angular-Slim-CRUD/API/vendor/parse/php-sdk/src/Parse/ParseQuery.php:99 Stack trace: #0 /home/ramy/Angular-Slim-CRUD/API/API/CRUD.php(128): Parse\ParseQuery->get('54PdNVCvCA') #1 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Array) #2 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array) #3 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/Route.php(344): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array) #4 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(122): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response)) #5 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/Route.php(316): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response)) #6 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/App.php(476): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response)) #7 /home/ramy/Angular-Slim-CRUD/API/src/middleware.php(6): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response)) #8 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App)) #9 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/DeferredCallable.php(43): call_user_func_array(Object(Closure), Array) #10 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App)) #11 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(73): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App)) #12 /home/ramy/Angular-Slim-CRUD/API/vendor/tuupola/slim-jwt-auth/src/JwtAuthentication.php(145): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response)) #13 [internal function]: Slim\Middleware\JwtAuthentication->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure)) #14 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/DeferredCallable.php(43): call_user_func_array(Object(Slim\Middleware\JwtAuthentication), Array) #15 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure)) #16 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(73): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Closure)) #17 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(122): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response)) #18 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/App.php(370): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response)) #19 /home/ramy/Angular-Slim-CRUD/API/vendor/slim/slim/Slim/App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response)) #20 /home/ramy/Angular-Slim-CRUD/API/public/index.php(31): Slim\App->run() #21 {main} [] {"uid":"ca27165"}
 [2017-10-20 20:55:46] Your Log API .INFO: update user data for User_Id= nPLyQne2qU [] {"uid":"2bfbe7e"}
+[2017-10-20 22:31:24] Your Log API .INFO: new user login with user name= ramy [] {"uid":"d45ab57"}
+[2017-10-20 22:34:05] Your Log API .INFO: new user login with user name= ramy [] {"uid":"56be190"}
+[2017-10-20 22:34:33] Your Log API .INFO: new user login with user name= ramy [] {"uid":"dea29a1"}
+[2017-10-20 23:02:00] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"01f4932"}
+[2017-10-20 23:02:37] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"c827ca6"}
+[2017-10-21 00:46:40] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"f93a25e"}
+[2017-10-21 00:48:24] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"eae57fa"}
+[2017-10-21 00:51:12] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"3c63514"}
+[2017-10-21 01:04:37] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"4657294"}
+[2017-10-21 01:05:23] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"98369f5"}
+[2017-10-21 01:06:32] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"d5144f0"}
+[2017-10-21 01:17:30] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"360c7c2"}
+[2017-10-21 01:22:09] Your Log API .INFO: user has been saved successflly  [] {"uid":"14c5b74"}
+[2017-10-21 01:26:29] Your Log API .INFO: user has been saved successflly  [] {"uid":"8384e1b"}
+[2017-10-21 01:32:41] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"1777f8a"}
+[2017-10-21 01:33:04] Your Log API .INFO: user has been saved successflly  [] {"uid":"bd1409c"}
+[2017-10-21 01:52:11] Your Log API .INFO: new user login with user name= 1234 [] {"uid":"929d488"}
+[2017-10-21 01:55:15] Your Log API .INFO: Delete user  with used_id=KVsWY41AR3 [] {"uid":"14d1813"}
+[2017-10-21 01:55:22] Your Log API .INFO: Delete user  with used_id=n9tVA5qWmS [] {"uid":"aca9b9c"}
+[2017-10-21 01:55:23] Your Log API .INFO: Delete user  with used_id=nPLyQne2qU [] {"uid":"8ba8ce3"}
+[2017-10-21 01:55:25] Your Log API .INFO: Delete user  with used_id=E2qW8IKdEU [] {"uid":"3289f5b"}
+[2017-10-21 01:55:26] Your Log API .INFO: Delete user  with used_id=ooogcWfgC5 [] {"uid":"0369235"}
+[2017-10-21 01:55:28] Your Log API .INFO: Delete user  with used_id=e7eosttoCu [] {"uid":"f6e47f4"}
+[2017-10-21 01:59:16] Your Log API .INFO: user has been saved successflly  [] {"uid":"4a70ea4"}
+[2017-10-21 02:13:53] Your Log API .INFO: new user login with user name= ramy [] {"uid":"978deb0"}
+[2017-10-21 02:14:31] Your Log API .INFO: user has been saved successflly  [] {"uid":"5c5f31f"}
+[2017-10-21 02:16:38] Your Log API .INFO: user has been saved successflly  [] {"uid":"7a493dc"}
+[2017-10-21 02:19:05] Your Log API .INFO: user has been saved successflly  [] {"uid":"120421f"}
+[2017-10-21 02:20:26] Your Log API .INFO: user has been saved successflly  [] {"uid":"d64fb11"}
+[2017-10-21 02:21:42] Your Log API .INFO: user has been saved successflly  [] {"uid":"779d973"}
+[2017-10-21 02:22:36] Your Log API .INFO: new user login with user name= ramy [] {"uid":"fe484fa"}
+[2017-10-21 02:23:40] Your Log API .INFO: user has been saved successflly  [] {"uid":"1a5f438"}
+[2017-10-21 02:27:31] Your Log API .INFO: user has been saved successflly  [] {"uid":"1719212"}
+[2017-10-21 02:33:39] Your Log API .INFO: new user login with user name= ramy [] {"uid":"9dd8eb7"}
+[2017-10-21 02:48:24] Your Log API .INFO: new user login with user name= ramy [] {"uid":"35307a8"}
+[2017-10-21 03:01:21] Your Log API .INFO: new user login with user name= ramy [] {"uid":"58683e9"}
+[2017-10-21 03:01:46] Your Log API .INFO: update user data for User_Id= C5HTZegbZS [] {"uid":"6b28c5e"}
+[2017-10-21 03:03:13] Your Log API .INFO: update user data for User_Id= C5HTZegbZS [] {"uid":"4f3ecbf"}
+[2017-10-21 03:26:06] Your Log API .INFO: new user login with user name= ramy [] {"uid":"e2de6f3"}
+[2017-10-21 03:36:05] Your Log API .INFO: new user login with user name= ramy [] {"uid":"eaef9d7"}
+[2017-10-21 03:37:01] Your Log API .INFO: new user login with user name= ramy [] {"uid":"00c8a41"}
+[2017-10-21 03:37:37] Your Log API .INFO: new user login with user name= ramy [] {"uid":"f9a0e5b"}
+[2017-10-21 03:38:16] Your Log API .INFO: new user login with user name= ramy [] {"uid":"6ba80e3"}
+[2017-10-21 03:39:32] Your Log API .INFO: new user login with user name= ramy [] {"uid":"a74e15e"}
+[2017-10-21 03:42:27] Your Log API .INFO: Delete user  with used_id=C5HTZegbZS [] {"uid":"b4e893c"}
+[2017-10-21 03:45:26] Your Log API .INFO: new user login with user name= ramy [] {"uid":"5db1f88"}
+[2017-10-21 03:49:39] Your Log API .INFO: user has been saved successflly  [] {"uid":"338b3ab"}
