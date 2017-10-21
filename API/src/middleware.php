@@ -12,6 +12,7 @@ $app->add(function ($req, $res, $next) {
 //Adding JWT validation for all routes
 $app->add(new \Slim\Middleware\JwtAuthentication([
         "path" => ["/"],
+        "secure" => false,        
        "passthrough" => ["/api/v1/Login"],
        "secret" => "supersecretkey",
        "error" => function ($request, $response, $arguments) {
