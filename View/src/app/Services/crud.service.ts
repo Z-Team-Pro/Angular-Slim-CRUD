@@ -22,7 +22,7 @@ export class CrudService  {
       headers.append('Content-Type', 'application/json');
       headers.append('Authorization', `Bearer ${this.token}`);
       let options = new RequestOptions({ headers: headers });
-      return this.http.post('http://api.ramyzone.com/public/api/v1/AddUser',data,options)
+      return this.http.post('http://api.ramyzone.co/public/api/v1/AddUser',data,options)
       .map(result=>result.json());
   
     
@@ -38,7 +38,7 @@ export class CrudService  {
    headers.append('Authorization', `Bearer ${this.token}`);
    console.log(`Bearer ${this.token}`);
    let options = new RequestOptions({ headers: headers });
-    return this.http.get('http://api.ramyzone.com/public//api/v1/GetUser/'+id,options)
+    return this.http.get('http://api.ramyzone.co/public//api/v1/GetUser/'+id,options)
     .map(result=>result.json());
 
 
@@ -51,7 +51,7 @@ export class CrudService  {
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', `Bearer ${this.token}`);
     let options = new RequestOptions({ headers: headers });
-    return this.http.put('http://api.ramyzone.com/public/api/v1/UpdateUser',data,options)
+    return this.http.put('http://api.ramyzone.co/public/api/v1/UpdateUser',data,options)
     .map(result=>result.json());
 
   }
@@ -62,7 +62,7 @@ export class CrudService  {
     let headers = new Headers();
     headers.append('Authorization', `Bearer ${this.token}`);
     let options = new RequestOptions({ headers: headers });
-    return this.http.delete('http://api.ramyzone.com/public//api/v1/DeleteUser/'+user_id,options)
+    return this.http.delete('http://api.ramyzone.co/public//api/v1/DeleteUser/'+user_id,options)
     .map(result=>result.json());
 
   }

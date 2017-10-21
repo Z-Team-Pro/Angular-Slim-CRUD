@@ -7,7 +7,7 @@ export class LoginService {
   constructor( private http:Http) { }
   //lgoin method 
   login(data){
-    return this.http.post('http://api.ramyzone.com/public//api/v1/Login',data)
+    return this.http.post('http://api.ramyzone.co/public//api/v1/Login',data)
     .map(result=>result.json())
   }
 
